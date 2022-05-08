@@ -426,6 +426,7 @@ def get_holdings():
         response = client.investments_holdings_get(request)
         pretty_print_response(response.to_dict())
         print('testing')
+        pretty_print_response('testing2')
         return jsonify({'error': None, 'holdings': response.to_dict()})
     except plaid.ApiException as e:
         error_response = format_error(e)
